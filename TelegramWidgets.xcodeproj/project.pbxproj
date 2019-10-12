@@ -9,12 +9,38 @@
 /* Begin PBXBuildFile section */
 		0E7A46A823511D3100224275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46A723511D3100224275 /* AppDelegate.swift */; };
 		0E7A46AA23511D3100224275 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46A923511D3100224275 /* SceneDelegate.swift */; };
-		0E7A46AC23511D3100224275 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46AB23511D3100224275 /* ViewController.swift */; };
+		0E7A46AC23511D3100224275 /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46AB23511D3100224275 /* PhoneNumberViewController.swift */; };
 		0E7A46AF23511D3100224275 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7A46AD23511D3100224275 /* Main.storyboard */; };
 		0E7A46B123511D3200224275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E7A46B023511D3200224275 /* Assets.xcassets */; };
 		0E7A46B423511D3200224275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7A46B223511D3200224275 /* LaunchScreen.storyboard */; };
 		0E7A46BF23511D3200224275 /* TelegramWidgetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46BE23511D3200224275 /* TelegramWidgetsTests.swift */; };
 		0E7A46CA23511D3200224275 /* TelegramWidgetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46C923511D3200224275 /* TelegramWidgetsUITests.swift */; };
+		0E7A46DB23511EF600224275 /* TDLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D823511EF600224275 /* TDLib.framework */; };
+		0E7A46DC23511EF600224275 /* TDLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D823511EF600224275 /* TDLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E7A46DD23511EF600224275 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D923511EF600224275 /* PromiseKit.framework */; };
+		0E7A46DE23511EF600224275 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D923511EF600224275 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E7A46DF23511EF600224275 /* TDJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46DA23511EF600224275 /* TDJSON.framework */; };
+		0E7A46E023511EF600224275 /* TDJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46DA23511EF600224275 /* TDJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E7A46E5235122B600224275 /* ConstantHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46E4235122B600224275 /* ConstantHolder.swift */; };
+		0E7A46E723512B9000224275 /* VerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46E623512B9000224275 /* VerificationCodeViewController.swift */; };
+		0E7A46E923512E8E00224275 /* TwoFactorPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46E823512E8E00224275 /* TwoFactorPasswordViewController.swift */; };
+		0EDBE85223520E1E00F24A14 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBE85123520E1E00F24A14 /* HomeViewController.swift */; };
+		0EDBE85623520F0100F24A14 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDBE85523520F0100F24A14 /* Home.storyboard */; };
+		0EDBE85D23521AF800F24A14 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDBE85C23521AF800F24A14 /* NotificationCenter.framework */; };
+		0EDBE86023521AF800F24A14 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBE85F23521AF800F24A14 /* TodayViewController.swift */; };
+		0EDBE86323521AF800F24A14 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDBE86123521AF800F24A14 /* MainInterface.storyboard */; };
+		0EDBE86823521AF800F24A14 /* ConversationsWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EDBE85B23521AF800F24A14 /* ConversationsWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0EDBE86C23521B5800F24A14 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D923511EF600224275 /* PromiseKit.framework */; };
+		0EDBE86D23521B5800F24A14 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D923511EF600224275 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EDBE86E23521B5800F24A14 /* TDJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46DA23511EF600224275 /* TDJSON.framework */; };
+		0EDBE86F23521B5800F24A14 /* TDJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46DA23511EF600224275 /* TDJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EDBE87023521B5800F24A14 /* TDLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D823511EF600224275 /* TDLib.framework */; };
+		0EDBE87123521B5800F24A14 /* TDLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D823511EF600224275 /* TDLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EDBE8762352319100F24A14 /* ConstantHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBE8752352319100F24A14 /* ConstantHolder.swift */; };
+		0EDBE8792352859600F24A14 /* LetterAvatarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDBE8782352859500F24A14 /* LetterAvatarKit.framework */; };
+		0EDBE87A2352859600F24A14 /* LetterAvatarKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDBE8782352859500F24A14 /* LetterAvatarKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EDBE87C2352874F00F24A14 /* BadgeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDBE87B2352874F00F24A14 /* BadgeSwift.framework */; };
+		0EDBE87D2352874F00F24A14 /* BadgeSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDBE87B2352874F00F24A14 /* BadgeSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,13 +58,62 @@
 			remoteGlobalIDString = 0E7A46A323511D3100224275;
 			remoteInfo = TelegramWidgets;
 		};
+		0EDBE86523521AF800F24A14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E7A469C23511D3100224275 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EDBE85A23521AF800F24A14;
+			remoteInfo = ConversationsWidget;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0E7A46E123511EF600224275 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E7A46E023511EF600224275 /* TDJSON.framework in Embed Frameworks */,
+				0E7A46DC23511EF600224275 /* TDLib.framework in Embed Frameworks */,
+				0E7A46DE23511EF600224275 /* PromiseKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EDBE86723521AF800F24A14 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0EDBE86823521AF800F24A14 /* ConversationsWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EDBE87223521B5800F24A14 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0EDBE87A2352859600F24A14 /* LetterAvatarKit.framework in Embed Frameworks */,
+				0EDBE87D2352874F00F24A14 /* BadgeSwift.framework in Embed Frameworks */,
+				0EDBE86F23521B5800F24A14 /* TDJSON.framework in Embed Frameworks */,
+				0EDBE87123521B5800F24A14 /* TDLib.framework in Embed Frameworks */,
+				0EDBE86D23521B5800F24A14 /* PromiseKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0E7A46A423511D3100224275 /* TelegramWidgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelegramWidgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E7A46A423511D3100224275 /* Telegram Widgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telegram Widgets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7A46A723511D3100224275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E7A46A923511D3100224275 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0E7A46AB23511D3100224275 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E7A46AB23511D3100224275 /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
 		0E7A46AE23511D3100224275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E7A46B023511D3200224275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E7A46B323511D3200224275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +124,24 @@
 		0E7A46C523511D3200224275 /* TelegramWidgetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelegramWidgetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7A46C923511D3200224275 /* TelegramWidgetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramWidgetsUITests.swift; sourceTree = "<group>"; };
 		0E7A46CB23511D3200224275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E7A46D823511EF600224275 /* TDLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TDLib.framework; path = Carthage/Build/iOS/TDLib.framework; sourceTree = "<group>"; };
+		0E7A46D923511EF600224275 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		0E7A46DA23511EF600224275 /* TDJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TDJSON.framework; path = Carthage/Build/iOS/TDJSON.framework; sourceTree = "<group>"; };
+		0E7A46E4235122B600224275 /* ConstantHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantHolder.swift; sourceTree = "<group>"; };
+		0E7A46E623512B9000224275 /* VerificationCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeViewController.swift; sourceTree = "<group>"; };
+		0E7A46E823512E8E00224275 /* TwoFactorPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFactorPasswordViewController.swift; sourceTree = "<group>"; };
+		0EDBE85123520E1E00F24A14 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0EDBE85523520F0100F24A14 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		0EDBE85B23521AF800F24A14 /* ConversationsWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ConversationsWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EDBE85C23521AF800F24A14 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		0EDBE85F23521AF800F24A14 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		0EDBE86223521AF800F24A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0EDBE86423521AF800F24A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EDBE87323522E4400F24A14 /* ConversationsWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ConversationsWidget.entitlements; sourceTree = "<group>"; };
+		0EDBE87423522FF100F24A14 /* TelegramWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TelegramWidgets.entitlements; sourceTree = "<group>"; };
+		0EDBE8752352319100F24A14 /* ConstantHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantHolder.swift; sourceTree = "<group>"; };
+		0EDBE8782352859500F24A14 /* LetterAvatarKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LetterAvatarKit.framework; path = Carthage/Build/iOS/LetterAvatarKit.framework; sourceTree = "<group>"; };
+		0EDBE87B2352874F00F24A14 /* BadgeSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BadgeSwift.framework; path = Carthage/Build/iOS/BadgeSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +149,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7A46DF23511EF600224275 /* TDJSON.framework in Frameworks */,
+				0E7A46DB23511EF600224275 /* TDLib.framework in Frameworks */,
+				0E7A46DD23511EF600224275 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +169,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0EDBE85823521AF800F24A14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EDBE86E23521B5800F24A14 /* TDJSON.framework in Frameworks */,
+				0EDBE8792352859600F24A14 /* LetterAvatarKit.framework in Frameworks */,
+				0EDBE87C2352874F00F24A14 /* BadgeSwift.framework in Frameworks */,
+				0EDBE85D23521AF800F24A14 /* NotificationCenter.framework in Frameworks */,
+				0EDBE87023521B5800F24A14 /* TDLib.framework in Frameworks */,
+				0EDBE86C23521B5800F24A14 /* PromiseKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,16 +191,19 @@
 				0E7A46A623511D3100224275 /* TelegramWidgets */,
 				0E7A46BD23511D3200224275 /* TelegramWidgetsTests */,
 				0E7A46C823511D3200224275 /* TelegramWidgetsUITests */,
+				0EDBE85E23521AF800F24A14 /* ConversationsWidget */,
 				0E7A46A523511D3100224275 /* Products */,
+				0E7A46D723511EF600224275 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		0E7A46A523511D3100224275 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E7A46A423511D3100224275 /* TelegramWidgets.app */,
+				0E7A46A423511D3100224275 /* Telegram Widgets.app */,
 				0E7A46BA23511D3200224275 /* TelegramWidgetsTests.xctest */,
 				0E7A46C523511D3200224275 /* TelegramWidgetsUITests.xctest */,
+				0EDBE85B23521AF800F24A14 /* ConversationsWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,10 +211,12 @@
 		0E7A46A623511D3100224275 /* TelegramWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				0EDBE87423522FF100F24A14 /* TelegramWidgets.entitlements */,
+				0EDBE85323520E2500F24A14 /* Main */,
+				0EDBE85423520EF500F24A14 /* Home */,
+				0E7A46E3235122A400224275 /* Toolbox */,
 				0E7A46A723511D3100224275 /* AppDelegate.swift */,
 				0E7A46A923511D3100224275 /* SceneDelegate.swift */,
-				0E7A46AB23511D3100224275 /* ViewController.swift */,
-				0E7A46AD23511D3100224275 /* Main.storyboard */,
 				0E7A46B023511D3200224275 /* Assets.xcassets */,
 				0E7A46B223511D3200224275 /* LaunchScreen.storyboard */,
 				0E7A46B523511D3200224275 /* Info.plist */,
@@ -128,6 +242,59 @@
 			path = TelegramWidgetsUITests;
 			sourceTree = "<group>";
 		};
+		0E7A46D723511EF600224275 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EDBE87B2352874F00F24A14 /* BadgeSwift.framework */,
+				0EDBE8782352859500F24A14 /* LetterAvatarKit.framework */,
+				0E7A46D923511EF600224275 /* PromiseKit.framework */,
+				0E7A46DA23511EF600224275 /* TDJSON.framework */,
+				0E7A46D823511EF600224275 /* TDLib.framework */,
+				0EDBE85C23521AF800F24A14 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E7A46E3235122A400224275 /* Toolbox */ = {
+			isa = PBXGroup;
+			children = (
+				0E7A46E4235122B600224275 /* ConstantHolder.swift */,
+			);
+			path = Toolbox;
+			sourceTree = "<group>";
+		};
+		0EDBE85323520E2500F24A14 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0E7A46AD23511D3100224275 /* Main.storyboard */,
+				0E7A46AB23511D3100224275 /* PhoneNumberViewController.swift */,
+				0E7A46E623512B9000224275 /* VerificationCodeViewController.swift */,
+				0E7A46E823512E8E00224275 /* TwoFactorPasswordViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0EDBE85423520EF500F24A14 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0EDBE85523520F0100F24A14 /* Home.storyboard */,
+				0EDBE85123520E1E00F24A14 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0EDBE85E23521AF800F24A14 /* ConversationsWidget */ = {
+			isa = PBXGroup;
+			children = (
+				0EDBE87323522E4400F24A14 /* ConversationsWidget.entitlements */,
+				0EDBE85F23521AF800F24A14 /* TodayViewController.swift */,
+				0EDBE86123521AF800F24A14 /* MainInterface.storyboard */,
+				0EDBE86423521AF800F24A14 /* Info.plist */,
+				0EDBE8752352319100F24A14 /* ConstantHolder.swift */,
+			);
+			path = ConversationsWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,14 +305,17 @@
 				0E7A46A023511D3100224275 /* Sources */,
 				0E7A46A123511D3100224275 /* Frameworks */,
 				0E7A46A223511D3100224275 /* Resources */,
+				0E7A46E123511EF600224275 /* Embed Frameworks */,
+				0EDBE86723521AF800F24A14 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0EDBE86623521AF800F24A14 /* PBXTargetDependency */,
 			);
 			name = TelegramWidgets;
 			productName = TelegramWidgets;
-			productReference = 0E7A46A423511D3100224275 /* TelegramWidgets.app */;
+			productReference = 0E7A46A423511D3100224275 /* Telegram Widgets.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0E7A46B923511D3200224275 /* TelegramWidgetsTests */ = {
@@ -184,6 +354,24 @@
 			productReference = 0E7A46C523511D3200224275 /* TelegramWidgetsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0EDBE85A23521AF800F24A14 /* ConversationsWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EDBE86B23521AF800F24A14 /* Build configuration list for PBXNativeTarget "ConversationsWidget" */;
+			buildPhases = (
+				0EDBE85723521AF800F24A14 /* Sources */,
+				0EDBE85823521AF800F24A14 /* Frameworks */,
+				0EDBE85923521AF800F24A14 /* Resources */,
+				0EDBE87223521B5800F24A14 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConversationsWidget;
+			productName = ConversationsWidget;
+			productReference = 0EDBE85B23521AF800F24A14 /* ConversationsWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +393,9 @@
 						CreatedOnToolsVersion = 11.1;
 						TestTargetID = 0E7A46A323511D3100224275;
 					};
+					0EDBE85A23521AF800F24A14 = {
+						CreatedOnToolsVersion = 11.1;
+					};
 				};
 			};
 			buildConfigurationList = 0E7A469F23511D3100224275 /* Build configuration list for PBXProject "TelegramWidgets" */;
@@ -223,6 +414,7 @@
 				0E7A46A323511D3100224275 /* TelegramWidgets */,
 				0E7A46B923511D3200224275 /* TelegramWidgetsTests */,
 				0E7A46C423511D3200224275 /* TelegramWidgetsUITests */,
+				0EDBE85A23521AF800F24A14 /* ConversationsWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +427,7 @@
 				0E7A46B423511D3200224275 /* LaunchScreen.storyboard in Resources */,
 				0E7A46B123511D3200224275 /* Assets.xcassets in Resources */,
 				0E7A46AF23511D3100224275 /* Main.storyboard in Resources */,
+				0EDBE85623520F0100F24A14 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +445,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0EDBE85923521AF800F24A14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EDBE86323521AF800F24A14 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,9 +460,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E7A46AC23511D3100224275 /* ViewController.swift in Sources */,
+				0E7A46AC23511D3100224275 /* PhoneNumberViewController.swift in Sources */,
 				0E7A46A823511D3100224275 /* AppDelegate.swift in Sources */,
 				0E7A46AA23511D3100224275 /* SceneDelegate.swift in Sources */,
+				0E7A46E923512E8E00224275 /* TwoFactorPasswordViewController.swift in Sources */,
+				0E7A46E723512B9000224275 /* VerificationCodeViewController.swift in Sources */,
+				0EDBE85223520E1E00F24A14 /* HomeViewController.swift in Sources */,
+				0E7A46E5235122B600224275 /* ConstantHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +486,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0EDBE85723521AF800F24A14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EDBE86023521AF800F24A14 /* TodayViewController.swift in Sources */,
+				0EDBE8762352319100F24A14 /* ConstantHolder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +507,11 @@
 			isa = PBXTargetDependency;
 			target = 0E7A46A323511D3100224275 /* TelegramWidgets */;
 			targetProxy = 0E7A46C623511D3200224275 /* PBXContainerItemProxy */;
+		};
+		0EDBE86623521AF800F24A14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EDBE85A23521AF800F24A14 /* ConversationsWidget */;
+			targetProxy = 0EDBE86523521AF800F24A14 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -311,6 +530,14 @@
 				0E7A46B323511D3200224275 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0EDBE86123521AF800F24A14 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EDBE86223521AF800F24A14 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -433,16 +660,22 @@
 		0E7A46CF23511D3200224275 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TelegramWidgets/TelegramWidgets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9T4AR9N5WH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TelegramWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.koraykoska.TelegramWidgets;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Telegram Widgets";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,16 +684,22 @@
 		0E7A46D023511D3200224275 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TelegramWidgets/TelegramWidgets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9T4AR9N5WH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TelegramWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.koraykoska.TelegramWidgets;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Telegram Widgets";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -550,6 +789,54 @@
 			};
 			name = Release;
 		};
+		0EDBE86923521AF800F24A14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ConversationsWidget/ConversationsWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9T4AR9N5WH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ConversationsWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.koraykoska.TelegramWidgets.ConversationsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0EDBE86A23521AF800F24A14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ConversationsWidget/ConversationsWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9T4AR9N5WH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ConversationsWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.koraykoska.TelegramWidgets.ConversationsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -585,6 +872,15 @@
 			buildConfigurations = (
 				0E7A46D523511D3200224275 /* Debug */,
 				0E7A46D623511D3200224275 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EDBE86B23521AF800F24A14 /* Build configuration list for PBXNativeTarget "ConversationsWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EDBE86923521AF800F24A14 /* Debug */,
+				0EDBE86A23521AF800F24A14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

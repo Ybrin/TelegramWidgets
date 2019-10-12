@@ -1,20 +1,16 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  TelegramWidgets
 //
-//  Created by Koray Koska on 11.10.19.
+//  Created by Koray Koska on 12.10.19.
 //  Copyright © 2019 Koray Koska. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-

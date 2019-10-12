@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xh9-8a-GIG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Telegram Widgets-->
+        <scene sceneID="gma-gL-b0L">
+            <objects>
+                <viewController id="c92-C8-6aD" customClass="HomeViewController" customModule="TelegramWidgets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pp9-HV-utc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access all Telegram Widgets from the Widgets menu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xb-Qa-dZz">
+                                <rect key="frame" x="34.5" y="423" width="345.5" height="50.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="T2T-Ta-leN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="XV0-Si-1cb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kvm-FR-1uZ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Xb-Qa-dZz" secondAttribute="trailing" constant="8" id="42e-fG-q12"/>
+                            <constraint firstItem="8Xb-Qa-dZz" firstAttribute="centerX" secondItem="Pp9-HV-utc" secondAttribute="centerX" id="IQ5-Li-46d"/>
+                            <constraint firstItem="8Xb-Qa-dZz" firstAttribute="centerY" secondItem="Pp9-HV-utc" secondAttribute="centerY" id="gP6-CY-VXc"/>
+                            <constraint firstItem="8Xb-Qa-dZz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kvm-FR-1uZ" secondAttribute="leading" constant="8" id="rZy-da-Amq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kvm-FR-1uZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Telegram Widgets" id="nrc-QE-l1D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFy-Hx-ZmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="142.63392857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="75B-Yb-1KJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xh9-8a-GIG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RkM-YE-AO4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c92-C8-6aD" kind="relationship" relationship="rootViewController" id="l5x-4m-mcf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LH8-ew-sLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="142.63392857142856"/>
+        </scene>
+    </scenes>
+</document>

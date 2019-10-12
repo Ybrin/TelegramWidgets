@@ -1,0 +1,3 @@
+github "leoMehlig/TDLib-iOS"
+github "vpeschenkov/LetterAvatarKit" == 1.2.1
+github "evgenyneu/swift-badge" ~> 8.0

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8kk-Rw-trL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Phone Number View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PhoneNumberViewController" customModule="TelegramWidgets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0P8-T3-waa">
+                                <rect key="frame" x="8" y="431" width="398" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="SZt-0e-XZt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8c-ON-QOb">
+                                <rect key="frame" x="360" y="473" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="DTv-r1-PQm"/>
+                                    <constraint firstAttribute="height" constant="30" id="tts-4R-rmv"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0P8-T3-waa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2iB-SS-gvl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0P8-T3-waa" secondAttribute="trailing" constant="8" id="Dsq-Ye-mb7"/>
+                            <constraint firstItem="0P8-T3-waa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Vkx-4r-04W"/>
+                            <constraint firstItem="M8c-ON-QOb" firstAttribute="top" secondItem="0P8-T3-waa" secondAttribute="bottom" constant="8" id="lBI-T7-KHO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M8c-ON-QOb" secondAttribute="trailing" constant="8" id="o2Q-R7-LNg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y9d-Fv-g4t"/>
+                    <connections>
+                        <outlet property="loginButton" destination="M8c-ON-QOb" id="lTJ-ZD-mVm"/>
+                        <outlet property="phoneNumberTextField" destination="0P8-T3-waa" id="uEC-b8-YYX"/>
+                        <segue destination="WVF-QU-ZFY" kind="show" identifier="ShowCodeController" id="C7T-bW-OzV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+        </scene>
+        <!--Verification Code View Controller-->
+        <scene sceneID="G6f-6Q-KHv">
+            <objects>
+                <viewController id="WVF-QU-ZFY" customClass="VerificationCodeViewController" customModule="TelegramWidgets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cUa-rP-e4r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WlJ-cQ-DsG">
+                                <rect key="frame" x="8" y="431" width="398" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="4p8-Wz-1eS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGz-fj-3lt">
+                                <rect key="frame" x="360" y="473" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1gM-15-PSJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="yiS-CC-9PF"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VBd-yC-rlo" firstAttribute="trailing" secondItem="WlJ-cQ-DsG" secondAttribute="trailing" constant="8" id="4Fd-a8-FSf"/>
+                            <constraint firstItem="WlJ-cQ-DsG" firstAttribute="leading" secondItem="VBd-yC-rlo" secondAttribute="leading" constant="8" id="OxN-Nt-dWZ"/>
+                            <constraint firstItem="WlJ-cQ-DsG" firstAttribute="centerY" secondItem="cUa-rP-e4r" secondAttribute="centerY" id="gT3-6n-ofk"/>
+                            <constraint firstItem="VBd-yC-rlo" firstAttribute="trailing" secondItem="GGz-fj-3lt" secondAttribute="trailing" constant="8" id="hvu-Nn-ngk"/>
+                            <constraint firstItem="GGz-fj-3lt" firstAttribute="top" secondItem="WlJ-cQ-DsG" secondAttribute="bottom" constant="8" id="jdV-Ul-ubV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VBd-yC-rlo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y3B-Me-JC1"/>
+                    <connections>
+                        <outlet property="nextButton" destination="GGz-fj-3lt" id="fDL-KX-VFU"/>
+                        <outlet property="verificationCodeTextField" destination="WlJ-cQ-DsG" id="jva-7e-s6Y"/>
+                        <segue destination="fby-oX-MFn" kind="show" identifier="ShowPasswordController" id="wx4-1Y-nEn"/>
+                        <segue destination="1Jc-tb-vye" kind="presentation" identifier="ShowHomeController" modalPresentationStyle="fullScreen" id="mQs-ut-oR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tF-Nt-nTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971.0144927536232" y="137.94642857142856"/>
+        </scene>
+        <!--Two Factor Password View Controller-->
+        <scene sceneID="Owb-jy-ojG">
+            <objects>
+                <viewController id="fby-oX-MFn" customClass="TwoFactorPasswordViewController" customModule="TelegramWidgets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5lW-B9-Jhl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eF8-O2-jWe">
+                                <rect key="frame" x="8" y="431" width="398" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Wo4-Uj-2rK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsX-bm-ond">
+                                <rect key="frame" x="360" y="473" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="NGj-1k-2mH"/>
+                                    <constraint firstAttribute="height" constant="30" id="aOY-Nt-KD3"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eF8-O2-jWe" firstAttribute="centerY" secondItem="5lW-B9-Jhl" secondAttribute="centerY" id="AW1-zx-nN9"/>
+                            <constraint firstItem="Bhm-8h-UfM" firstAttribute="trailing" secondItem="ZsX-bm-ond" secondAttribute="trailing" constant="8" id="Bhb-BG-Ysy"/>
+                            <constraint firstItem="Bhm-8h-UfM" firstAttribute="trailing" secondItem="eF8-O2-jWe" secondAttribute="trailing" constant="8" id="jUN-2p-1lk"/>
+                            <constraint firstItem="ZsX-bm-ond" firstAttribute="top" secondItem="eF8-O2-jWe" secondAttribute="bottom" constant="8" id="sRe-ZW-aGp"/>
+                            <constraint firstItem="eF8-O2-jWe" firstAttribute="leading" secondItem="Bhm-8h-UfM" secondAttribute="leading" constant="8" id="x0A-sb-dwx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bhm-8h-UfM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EGj-Po-ad5"/>
+                    <connections>
+                        <outlet property="nextButton" destination="ZsX-bm-ond" id="m37-nH-vQ9"/>
+                        <outlet property="passwordTextField" destination="eF8-O2-jWe" id="xcg-DG-pjo"/>
+                        <segue destination="1Jc-tb-vye" kind="presentation" identifier="ShowHomeController" modalPresentationStyle="fullScreen" id="3Lo-WC-CU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqz-x5-6Xv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2997" y="-70"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="tNW-Ia-NlD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="1Jc-tb-vye" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sG5-93-8eZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2996" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sLc-Ss-93m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8kk-Rw-trL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="byX-nx-ghg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1K8-jj-6le"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xp7-xr-ohu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Lo-WC-CU8"/>
+    </inferredMetricsTieBreakers>
+</document>

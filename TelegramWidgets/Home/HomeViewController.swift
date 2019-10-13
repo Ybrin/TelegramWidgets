@@ -20,10 +20,12 @@ class HomeViewController: UIViewController {
     }
 
     @objc private func logoutButtonClicked() {
+        logoutButton.isEnabled = false
         DispatchQueue(label: "Logout").async {
             ConstantHolder.coordinator.send(LogOut()).done { ok in
                 self.performSegue(withIdentifier: "ShowMainStoryboard", sender: nil)
             }.catch { error in
+                self.logoutButton.isEnabled = true
                 print(error)
             }
         }

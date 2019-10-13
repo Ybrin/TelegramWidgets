@@ -229,12 +229,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 switch chat.type {
                 case .private(let userId):
                     urlString = "tg://localpeer?id=\(userId)"
-                case .secret(let secretChatId, let userId):
+                case .secret(let secretChatId, _):
                     urlString = "tg://localpeer?id=\(secretChatId)"
                 case .basicGroup(let basicGroupId):
-                    urlString = "tg://localpeer?id="
-                case .supergroup(let supergroupId, let isChannel):
-                    urlString = "tg://localpeer?id="
+                    urlString = "tg://localpeer?channel=\(basicGroupId)"
+                case .supergroup(let supergroupId, _):
+                    urlString = "tg://localpeer?channel=\(supergroupId)"
                 }
 
                 guard let url = URL(string: urlString) else {

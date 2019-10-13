@@ -12,6 +12,7 @@ import TDLib
 import PromiseKit
 import LetterAvatarKit
 import BadgeSwift
+import Firebase
 
 class TodayViewController: UIViewController, NCWidgetProviding {
 
@@ -52,6 +53,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Firebase
+        FirebaseApp.configure()
 
         setupUI()
     }

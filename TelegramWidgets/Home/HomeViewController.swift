@@ -7,10 +7,25 @@
 //
 
 import UIKit
+import TDLib
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var logoutButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        logoutButton.addTarget(self, action: #selector(logoutButtonClicked), for: .touchUpInside)
+    }
+
+    @objc private func logoutButtonClicked() {
+        DispatchQueue(label: "Logout").async {
+            ConstantHolder.coordinator.send(LogOut()).done { ok in
+                self.performSegue(withIdentifier: "ShowMainStoryboard", sender: nil)
+            }.catch { error in
+                print(error)
+            }
+        }
     }
 }

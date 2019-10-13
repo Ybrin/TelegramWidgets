@@ -25,21 +25,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-CI-y5m">
+                                <rect key="frame" x="358" y="96" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="VVX-Pm-9AG"/>
+                                    <constraint firstAttribute="height" constant="30" id="gIa-8X-L0e"/>
+                                </constraints>
+                                <state key="normal" title="Logout"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="kvm-FR-1uZ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Xb-Qa-dZz" secondAttribute="trailing" constant="8" id="42e-fG-q12"/>
+                            <constraint firstItem="F0g-CI-y5m" firstAttribute="top" secondItem="kvm-FR-1uZ" secondAttribute="top" constant="8" id="7lJ-Sx-hp3"/>
                             <constraint firstItem="8Xb-Qa-dZz" firstAttribute="centerX" secondItem="Pp9-HV-utc" secondAttribute="centerX" id="IQ5-Li-46d"/>
                             <constraint firstItem="8Xb-Qa-dZz" firstAttribute="centerY" secondItem="Pp9-HV-utc" secondAttribute="centerY" id="gP6-CY-VXc"/>
+                            <constraint firstItem="kvm-FR-1uZ" firstAttribute="trailing" secondItem="F0g-CI-y5m" secondAttribute="trailing" constant="8" id="nDx-ve-JG4"/>
                             <constraint firstItem="8Xb-Qa-dZz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kvm-FR-1uZ" secondAttribute="leading" constant="8" id="rZy-da-Amq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kvm-FR-1uZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Telegram Widgets" id="nrc-QE-l1D"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="F0g-CI-y5m" id="vel-ej-hv6"/>
+                        <segue destination="t1L-fo-EOa" kind="presentation" identifier="ShowMainStoryboard" modalPresentationStyle="fullScreen" id="nU4-2L-VCd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFy-Hx-ZmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="142.63392857142856"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Dgh-0S-8pp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="t1L-fo-EOa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kKF-S8-Jne"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JXN-K8-TUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1471" y="-52"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="75B-Yb-1KJ">

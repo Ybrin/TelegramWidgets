@@ -232,9 +232,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 case .secret(let secretChatId, _):
                     urlString = "tg://localpeer?id=\(secretChatId)"
                 case .basicGroup(let basicGroupId):
-                    urlString = "tg://localpeer?channel=\(basicGroupId)"
+                    urlString = "tg://resolve?domain=\(basicGroupId)"
                 case .supergroup(let supergroupId, _):
-                    urlString = "tg://localpeer?channel=\(supergroupId)"
+                    urlString = "tg://resolve?domain=\(supergroupId)"
                 }
 
                 guard let url = URL(string: urlString) else {

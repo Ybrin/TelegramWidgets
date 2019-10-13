@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -252,11 +253,19 @@
                                     <constraint firstItem="Z7a-tx-Nb0" firstAttribute="top" secondItem="zYh-bV-RD5" secondAttribute="top" id="zmH-Tg-jid"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcb-jX-qAs" customClass="UIVisualEffectView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="zYh-bV-RD5" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="3kc-9y-Miv"/>
+                            <constraint firstItem="Wcb-jX-qAs" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="4so-vt-AlP"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="Wcb-jX-qAs" secondAttribute="bottom" id="Gbz-8k-RsO"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="zYh-bV-RD5" secondAttribute="bottom" id="Pyf-oa-ZNv"/>
                             <constraint firstItem="zYh-bV-RD5" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="Xny-K5-vas"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Wcb-jX-qAs" secondAttribute="trailing" id="fe3-sP-O2f"/>
+                            <constraint firstItem="Wcb-jX-qAs" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="pAO-NM-vKG"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="zYh-bV-RD5" secondAttribute="trailing" id="x0e-Wr-4C8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
@@ -265,6 +274,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="200"/>
                     <connections>
+                        <outlet property="blurView" destination="Wcb-jX-qAs" id="hEa-4r-r2K"/>
                         <outlet property="chat0Badge" destination="9li-3a-YLf" id="7D9-7T-6gm"/>
                         <outlet property="chat0Image" destination="Sdv-iU-KPG" id="OX5-zN-544"/>
                         <outlet property="chat0Name" destination="o1A-cS-h8L" id="NE6-QK-snj"/>

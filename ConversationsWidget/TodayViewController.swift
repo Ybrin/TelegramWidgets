@@ -23,6 +23,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
     private var authorized = false
 
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    private var blurInfoLabel: UILabel!
+    
     @IBOutlet weak var chat0View: UIView!
     @IBOutlet weak var chat0Image: UIImageView!
     @IBOutlet weak var chat0Name: UILabel!
@@ -63,8 +66,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
         runOrWaitForAuth { authorized in
             if authorized {
+                self.blurView.isHidden = true
                 self.getConversations(completionHandler: completionHandler)
             } else {
+                self.blurView.isHidden = false
                 completionHandler(.noData)
             }
         }
@@ -73,6 +78,33 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     // MARK: - UI setup
 
     private func setupUI() {
+        blurView.isHidden = true
+        if #available(iOSApplicationExtension 13.0, *) {
+            blurView.effect = UIBlurEffect(style: .systemUltraThinMaterial)
+        } else {
+            blurView.effect = UIBlurEffect(style: .light)
+        }
+        blurView.isUserInteractionEnabled = true
+        blurView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(blurViewClicked)))
+
+        blurInfoLabel = UILabel()
+        blurInfoLabel.text = "Please log in first in the \"Telegram Widgets\" app"
+        blurInfoLabel.font = UIFont.systemFont(ofSize: 16)
+        blurInfoLabel.textAlignment = .center
+        if #available(iOSApplicationExtension 13.0, *) {
+            blurInfoLabel.textColor = UIColor.label
+        } else {
+            blurInfoLabel.textColor = UIColor.darkText
+        }
+        blurView.contentView.addSubview(blurInfoLabel)
+        // Constraints
+        blurInfoLabel.translatesAutoresizingMaskIntoConstraints = false
+        let leadingConstraint = NSLayoutConstraint(item: blurInfoLabel!, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: blurView.contentView, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 8)
+        let trailingConstraint = NSLayoutConstraint(item: blurInfoLabel!, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: blurView.contentView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: -8)
+        let verticalConstraint = NSLayoutConstraint(item: blurInfoLabel!, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: blurView.contentView, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
+        let heightConstraint = NSLayoutConstraint(item: blurInfoLabel!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.greaterThanOrEqual, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 24)
+        blurView.contentView.addConstraints([leadingConstraint, trailingConstraint, verticalConstraint, heightConstraint])
+
         let imageViews: [UIImageView] = [chat0Image, chat1Image, chat2Image, chat3Image]
         for im in imageViews {
             im.layer.cornerRadius = im.frame.size.width / 2
@@ -111,7 +143,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             if self.authorized {
                 callback(true)
             } else {
-                ConstantHolder.coordinator.authorizationState.subscribe(with: self.authorizationSubscriptionHash, on: .main) { [weak self] event in
+                let currentHash = self.authorizationSubscriptionHash + UUID().uuidString
+                ConstantHolder.coordinator.authorizationState.subscribe(with: currentHash, on: .main) { [weak self] event in
                     guard let self = self, let state = event.value else {
                         callback(false)
                         return
@@ -120,11 +153,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                     switch state {
                     case .waitPhoneNumber, .waitCode, .waitPassword:
                         callback(false)
-                        ConstantHolder.coordinator.authorizationState.unsubscribe(self.authorizationSubscriptionHash)
+                        ConstantHolder.coordinator.authorizationState.unsubscribe(currentHash)
                     case .ready:
                         self.authorized = true
                         callback(true)
-                        ConstantHolder.coordinator.authorizationState.unsubscribe(self.authorizationSubscriptionHash)
+                        ConstantHolder.coordinator.authorizationState.unsubscribe(currentHash)
                     default:
                         break
                     }
@@ -212,6 +245,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
 
     // MARK: - Actions
+
+    @objc private func blurViewClicked() {
+        guard let url = URL(string: "telegramwidgets://") else {
+            return
+        }
+
+        extensionContext?.open(url, completionHandler: nil)
+    }
 
     @objc private func chatViewClicked(_ sender: UITapGestureRecognizer) {
         let view = sender.view

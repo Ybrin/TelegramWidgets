@@ -55,7 +55,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.viewDidLoad()
 
         // Firebase
-        FirebaseApp.configure()
+        let options = FirebaseOptions(googleAppID: "1:693782666251:ios:b5e22489cdb4db2a353b0e", gcmSenderID: "693782666251")
+        options.clientID = "693782666251-65rl3kd866nlm3gor6jf84n56i52s7jq.apps.googleusercontent.com"
+        options.apiKey = "AIzaSyAii0Nm-q3WweZXppwOgjOdI7Hb1P2rbg0"
+        options.bundleID = "com.koraykoska.TelegramWidgets.ConversationsWidget"
+        options.projectID = "telegramwidgets-app"
+        options.storageBucket = "telegramwidgets-app.appspot.com"
+        options.databaseURL = "https://telegramwidgets-app.firebaseio.com"
+        FirebaseApp.configure(options: options)
+        Analytics.setAnalyticsCollectionEnabled(true)
 
         setupUI()
     }

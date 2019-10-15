@@ -15,8 +15,12 @@ class PhoneNumberViewController: UIViewController {
 
     private let authorizationSubscriptionHash = "PhoneNumberController"
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var phoneNumberTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    private var loginButton: UIBarButtonItem!
+
+    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
 
     // MARK: - Initialization
 
@@ -28,6 +32,12 @@ class PhoneNumberViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        phoneNumberTextField.perform(
+            #selector(becomeFirstResponder),
+            with: nil,
+            afterDelay: 0.1
+        )
 
         ConstantHolder.coordinator.authorizationState.subscribe(with: authorizationSubscriptionHash, on: .main) { [weak self] event in
             guard let self = self, let state = event.value else {
@@ -61,9 +71,42 @@ class PhoneNumberViewController: UIViewController {
     // MARK: - UI setup
 
     private func setupUI() {
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .systemBackground
+        } else {
+            view.backgroundColor = .white
+        }
+
+        titleLabel.font = UIFont.systemFont(ofSize: 32)
+        titleLabel.textAlignment = .center
+        titleLabel.text = "Your Phone"
+        if #available(iOS 13.0, *) {
+            titleLabel.textColor = UIColor.label
+        } else {
+            titleLabel.textColor = .black
+        }
+
+        subtitleLabel.font = UIFont.systemFont(ofSize: 16)
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.text = "Please enter your phone number in international format."
+        if #available(iOS 13.0, *) {
+            subtitleLabel.textColor = UIColor.secondaryLabel
+        } else {
+            titleLabel.textColor = .black
+        }
+
+        phoneNumberTextField.placeholder = "Your phone number"
         phoneNumberTextField.isEnabled = false
+        phoneNumberTextField.keyboardType = .phonePad
+
+        loginButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(loginButtonClicked))
         loginButton.isEnabled = false
-        loginButton.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = loginButton
+
+        // Keyboard Resize
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardDidHideNotification, object: nil)
     }
 
     // MARK: - Helpers
@@ -75,17 +118,46 @@ class PhoneNumberViewController: UIViewController {
     // MARK: - Actions
 
     @objc private func loginButtonClicked() {
+        guard let text = self.phoneNumberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !text.isEmpty else {
+            return
+        }
+
         loginButton.isEnabled = false
         phoneNumberTextField.isEnabled = false
         phoneNumberTextField.resignFirstResponder()
 
-        let text = self.phoneNumberTextField.text ?? ""
         DispatchQueue(label: "Login").async {
             ConstantHolder.coordinator.send(SetAuthenticationPhoneNumber(phoneNumber: text, allowFlashCall: false, isCurrentPhoneNumber: false)).done { info in
                 print(info)
-            }.catch { error in
+            }.catch { [weak self] error in
+                self?.loginButton.isEnabled = true
+                self?.phoneNumberTextField.isEnabled = true
+                self?.phoneNumberTextField.becomeFirstResponder()
                 print(error)
             }
         }
+    }
+}
+
+// MARK: - Keyboard Resize
+
+extension PhoneNumberViewController {
+
+    @objc func keyboardWillShow(sender: NSNotification) {
+        let info = sender.userInfo!
+        let keyboardSize = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
+        viewBottomConstraint.constant = keyboardSize - bottomLayoutGuide.length
+
+        let duration: TimeInterval = (info[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+
+        UIView.animate(withDuration: duration) { self.view.layoutIfNeeded() }
+    }
+
+    @objc func keyboardWillHide(sender: NSNotification) {
+        let info = sender.userInfo!
+        let duration: TimeInterval = (info[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+        viewBottomConstraint.constant = 0
+
+        UIView.animate(withDuration: duration) { self.view.layoutIfNeeded() }
     }
 }

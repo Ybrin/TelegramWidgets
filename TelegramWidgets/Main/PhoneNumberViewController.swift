@@ -18,6 +18,7 @@ class PhoneNumberViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var errorTextField: UILabel!
     private var loginButton: UIBarButtonItem!
 
     @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
@@ -51,6 +52,12 @@ class PhoneNumberViewController: UIViewController {
             case .waitCode(let isRegistered, _, _):
                 if !isRegistered {
                     print("Registration is not supported")
+                    self.errorTextField.text = "Registration is not supported"
+                    self.errorTextField.isHidden = false
+
+                    self.phoneNumberTextField.isEnabled = true
+                    self.loginButton.isEnabled = true
+
                     return
                 }
                 self.redirectToCodeController()
@@ -95,6 +102,11 @@ class PhoneNumberViewController: UIViewController {
             titleLabel.textColor = .black
         }
 
+        errorTextField.font = UIFont.systemFont(ofSize: 12)
+        errorTextField.textAlignment = .natural
+        errorTextField.textColor = .systemRed
+        errorTextField.isHidden = true
+
         phoneNumberTextField.placeholder = "Your phone number"
         phoneNumberTextField.isEnabled = false
         phoneNumberTextField.keyboardType = .phonePad
@@ -133,6 +145,14 @@ class PhoneNumberViewController: UIViewController {
                 self?.loginButton.isEnabled = true
                 self?.phoneNumberTextField.isEnabled = true
                 self?.phoneNumberTextField.becomeFirstResponder()
+
+                if let error = error as? TDLib.Error {
+                    self?.errorTextField.text = error.message
+                } else {
+                    self?.errorTextField.text = "Unknown error"
+                }
+                self?.errorTextField.isHidden = false
+
                 print(error)
             }
         }

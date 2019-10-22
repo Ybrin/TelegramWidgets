@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0A1-hM-qa9">
-                                        <rect key="frame" x="0.0" y="298" width="414" height="178"/>
+                                        <rect key="frame" x="0.0" y="282" width="414" height="210"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0P8-T3-waa">
                                                 <rect key="frame" x="8" y="144" width="398" height="34"/>
@@ -48,18 +48,30 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot9-HD-2Ap">
+                                                <rect key="frame" x="8" y="186" width="398" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="SZA-6t-tG7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="0P8-T3-waa" firstAttribute="top" secondItem="erf-aY-aKp" secondAttribute="bottom" constant="64" id="06b-Ad-AT7"/>
                                             <constraint firstAttribute="trailing" secondItem="erf-aY-aKp" secondAttribute="trailing" constant="8" id="3Y9-eh-InZ"/>
                                             <constraint firstAttribute="trailing" secondItem="K3S-NM-8jF" secondAttribute="trailing" constant="8" id="4NO-fV-9e9"/>
+                                            <constraint firstItem="ot9-HD-2Ap" firstAttribute="top" secondItem="0P8-T3-waa" secondAttribute="bottom" constant="8" id="9gv-zk-Awp"/>
+                                            <constraint firstAttribute="trailing" secondItem="ot9-HD-2Ap" secondAttribute="trailing" constant="8" id="FLR-Ve-v7L"/>
                                             <constraint firstItem="0P8-T3-waa" firstAttribute="leading" secondItem="0A1-hM-qa9" secondAttribute="leading" constant="8" id="Q8U-4N-iNx"/>
                                             <constraint firstAttribute="trailing" secondItem="0P8-T3-waa" secondAttribute="trailing" constant="8" id="REP-yb-LZy"/>
                                             <constraint firstItem="K3S-NM-8jF" firstAttribute="top" secondItem="0A1-hM-qa9" secondAttribute="top" id="ReG-K6-iCx"/>
+                                            <constraint firstAttribute="bottom" secondItem="ot9-HD-2Ap" secondAttribute="bottom" id="X9f-6F-3d0"/>
                                             <constraint firstItem="erf-aY-aKp" firstAttribute="leading" secondItem="0A1-hM-qa9" secondAttribute="leading" constant="8" id="b4S-xc-kqr"/>
+                                            <constraint firstItem="ot9-HD-2Ap" firstAttribute="leading" secondItem="0A1-hM-qa9" secondAttribute="leading" constant="8" id="nud-Rr-DBP"/>
                                             <constraint firstItem="erf-aY-aKp" firstAttribute="top" secondItem="K3S-NM-8jF" secondAttribute="bottom" constant="32" id="oJT-Dz-Z8e"/>
-                                            <constraint firstAttribute="bottom" secondItem="0P8-T3-waa" secondAttribute="bottom" id="xCH-SU-RWu"/>
                                             <constraint firstItem="K3S-NM-8jF" firstAttribute="leading" secondItem="0A1-hM-qa9" secondAttribute="leading" constant="8" id="yVd-G2-Os4"/>
                                         </constraints>
                                     </view>
@@ -83,6 +95,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="y9d-Fv-g4t"/>
                     <connections>
+                        <outlet property="errorTextField" destination="ot9-HD-2Ap" id="PNg-zq-GH8"/>
                         <outlet property="phoneNumberTextField" destination="0P8-T3-waa" id="uEC-b8-YYX"/>
                         <outlet property="subtitleLabel" destination="erf-aY-aKp" id="Dmf-vw-V4G"/>
                         <outlet property="titleLabel" destination="K3S-NM-8jF" id="uCc-KI-mlZ"/>

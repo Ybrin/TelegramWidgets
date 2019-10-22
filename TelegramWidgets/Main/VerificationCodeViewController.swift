@@ -109,6 +109,20 @@ class VerificationCodeViewController: UIViewController {
 
     // MARK: - Actions
 
+    override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
+
+        if parent == nil {
+            DispatchQueue.global().async {
+                ConstantHolder.coordinator.send(LogOut()).done { ok in
+                    print(ok)
+                }.catch { error in
+                    print(error)
+                }
+            }
+        }
+    }
+
     @objc private func nextButtonClicked() {
         nextButton.isEnabled = false
         verificationCodeTextField.isEnabled = false

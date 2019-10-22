@@ -8,6 +8,7 @@
 
 import UIKit
 import TDLib
+import Firebase
 
 class HomeViewController: UIViewController {
 
@@ -17,9 +18,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         logoutButton.addTarget(self, action: #selector(logoutButtonClicked), for: .touchUpInside)
+
+        Analytics.logEvent("home_screen_launched", parameters: [:])
     }
 
     @objc private func logoutButtonClicked() {
+        Analytics.logEvent("logout", parameters: [:])
+
         logoutButton.isEnabled = false
         DispatchQueue(label: "Logout").async {
             ConstantHolder.coordinator.send(LogOut()).done { ok in

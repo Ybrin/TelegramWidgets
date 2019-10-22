@@ -72,7 +72,7 @@ class VerificationCodeViewController: UIViewController {
 
         titleLabel.font = UIFont.systemFont(ofSize: 32)
         titleLabel.textAlignment = .center
-        titleLabel.text = "+43"
+        titleLabel.text = "Verification Code"
         if #available(iOS 13.0, *) {
             titleLabel.textColor = UIColor.label
         } else {

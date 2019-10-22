@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         Analytics.setAnalyticsCollectionEnabled(true)
 
+        Analytics.logEvent("launch", parameters: [
+            "fun": true
+        ])
+
         return true
     }
 

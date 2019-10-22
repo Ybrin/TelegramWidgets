@@ -66,6 +66,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         Analytics.setAnalyticsCollectionEnabled(true)
 
         setupUI()
+
+        Analytics.logEvent("conversations_widget_launched", parameters: [:])
     }
 
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -80,9 +82,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             if authorized {
                 self.blurView.isHidden = true
                 self.getConversations(completionHandler: completionHandler)
+
+                Analytics.logEvent("conversations_widget_perform_update", parameters: [
+                    "authorized": true
+                ])
             } else {
                 self.blurView.isHidden = false
                 completionHandler(.noData)
+
+                Analytics.logEvent("conversations_widget_perform_update", parameters: [
+                    "authorized": false
+                ])
             }
         }
     }
@@ -199,6 +209,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
 
     private func setConversations(chats: [GetChat.Result]) {
+        Analytics.logEvent("conversations_widget_get_chats", parameters: [
+            "count": chats.count
+        ])
+
         // Set chats for redirct
         cachedChats = chats
 

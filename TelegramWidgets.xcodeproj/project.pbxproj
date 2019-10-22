@@ -19,7 +19,6 @@
 		0E7A46DC23511EF600224275 /* TDLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D823511EF600224275 /* TDLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E7A46DD23511EF600224275 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D923511EF600224275 /* PromiseKit.framework */; };
 		0E7A46DE23511EF600224275 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D923511EF600224275 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0E7A46DF23511EF600224275 /* TDJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46DA23511EF600224275 /* TDJSON.framework */; };
 		0E7A46E023511EF600224275 /* TDJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46DA23511EF600224275 /* TDJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E7A46E5235122B600224275 /* ConstantHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46E4235122B600224275 /* ConstantHolder.swift */; };
 		0E7A46E723512B9000224275 /* VerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46E623512B9000224275 /* VerificationCodeViewController.swift */; };
@@ -32,7 +31,6 @@
 		0EDBE86823521AF800F24A14 /* ConversationsWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0EDBE85B23521AF800F24A14 /* ConversationsWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EDBE86C23521B5800F24A14 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D923511EF600224275 /* PromiseKit.framework */; };
 		0EDBE86D23521B5800F24A14 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D923511EF600224275 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0EDBE86E23521B5800F24A14 /* TDJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46DA23511EF600224275 /* TDJSON.framework */; };
 		0EDBE86F23521B5800F24A14 /* TDJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46DA23511EF600224275 /* TDJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0EDBE87023521B5800F24A14 /* TDLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D823511EF600224275 /* TDLib.framework */; };
 		0EDBE87123521B5800F24A14 /* TDLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46D823511EF600224275 /* TDLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -190,7 +188,6 @@
 				0EEA37C32353BA3000C511D3 /* FirebaseCore.framework in Frameworks */,
 				0EEA37CD2353BA3000C511D3 /* GoogleDataTransportCCTSupport.framework in Frameworks */,
 				0EEA37D12353BA3000C511D3 /* nanopb.framework in Frameworks */,
-				0E7A46DF23511EF600224275 /* TDJSON.framework in Frameworks */,
 				0E7A46DB23511EF600224275 /* TDLib.framework in Frameworks */,
 				0EEA37C72353BA3000C511D3 /* GoogleDataTransport.framework in Frameworks */,
 				0EEA37C92353BA3000C511D3 /* FIRAnalyticsConnector.framework in Frameworks */,
@@ -222,7 +219,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EEA37DB2353BB1600C511D3 /* FirebaseAnalytics.framework in Frameworks */,
-				0EDBE86E23521B5800F24A14 /* TDJSON.framework in Frameworks */,
 				0EEA37E32353BB1600C511D3 /* GoogleAppMeasurement.framework in Frameworks */,
 				0EEA37E92353BB1600C511D3 /* GoogleUtilities.framework in Frameworks */,
 				0EEA37DD2353BB1600C511D3 /* FirebaseCore.framework in Frameworks */,

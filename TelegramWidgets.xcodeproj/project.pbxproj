@@ -23,6 +23,8 @@
 		0E7A46E5235122B600224275 /* ConstantHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46E4235122B600224275 /* ConstantHolder.swift */; };
 		0E7A46E723512B9000224275 /* VerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46E623512B9000224275 /* VerificationCodeViewController.swift */; };
 		0E7A46E923512E8E00224275 /* TwoFactorPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A46E823512E8E00224275 /* TwoFactorPasswordViewController.swift */; };
+		0E9D05922362EAC000F3E40C /* TDJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46DA23511EF600224275 /* TDJSON.framework */; };
+		0E9D05932362EAC900F3E40C /* TDJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A46DA23511EF600224275 /* TDJSON.framework */; };
 		0EDBE85223520E1E00F24A14 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDBE85123520E1E00F24A14 /* HomeViewController.swift */; };
 		0EDBE85623520F0100F24A14 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EDBE85523520F0100F24A14 /* Home.storyboard */; };
 		0EDBE85D23521AF800F24A14 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDBE85C23521AF800F24A14 /* NotificationCenter.framework */; };
@@ -197,6 +199,7 @@
 				0EEA37CB2353BA3000C511D3 /* GoogleAppMeasurement.framework in Frameworks */,
 				0E7A46DD23511EF600224275 /* PromiseKit.framework in Frameworks */,
 				0EEA37D52353BA3000C511D3 /* FirebaseAnalytics.framework in Frameworks */,
+				0E9D05922362EAC000F3E40C /* TDJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +236,7 @@
 				0EEA37E52353BB1600C511D3 /* GoogleDataTransport.framework in Frameworks */,
 				0EDBE87023521B5800F24A14 /* TDLib.framework in Frameworks */,
 				0EDBE86C23521B5800F24A14 /* PromiseKit.framework in Frameworks */,
+				0E9D05932362EAC900F3E40C /* TDJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

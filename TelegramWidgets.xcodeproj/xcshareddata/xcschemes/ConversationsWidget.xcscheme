@@ -85,16 +85,26 @@
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0E7A46A323511D3100224275"
-            BuildableName = "Telegram Widgets.app"
-            BlueprintName = "TelegramWidgets"
+            BlueprintIdentifier = "0EDBE85A23521AF800F24A14"
+            BuildableName = "ConversationsWidget.appex"
+            BlueprintName = "ConversationsWidget"
             ReferencedContainer = "container:TelegramWidgets.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0EDBE85A23521AF800F24A14"
+            BuildableName = "ConversationsWidget.appex"
+            BlueprintName = "ConversationsWidget"
+            ReferencedContainer = "container:TelegramWidgets.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

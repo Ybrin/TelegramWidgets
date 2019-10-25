@@ -168,7 +168,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 let currentHash = self.authorizationSubscriptionHash + UUID().uuidString
                 ConstantHolder.coordinator.authorizationState.subscribe(with: currentHash, on: .main) { [weak self] event in
                     guard let self = self, let state = event.value else {
-                        callback(false)
                         return
                     }
 
